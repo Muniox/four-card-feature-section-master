@@ -13,4 +13,45 @@
 .attribution a {
   color: #3e52a3;
 }
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+.wrapper {
+  height: calc(100vh - 17px);
+}
+
+.header {
+  text-align: center;
+  color: #4c4e61;
+  padding-top: 85px;
+  margin-bottom: 75px;
+}
+
+.header__title {
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.header__title-main {
+  display: block;
+  font-weight: 600;
+}
+
+.header__sub-text {
+  max-width: 505px;
+  font-size: 15px;
+  margin: 22px auto 0 auto;
+  padding: 0 30px;
+  font-weight: 400;
+  color: #a3a5ae;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+}
 /*# sourceMappingURL=style.css.map */

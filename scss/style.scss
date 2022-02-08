@@ -1,3 +1,14 @@
+//primary-colors
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+//neutral-colors
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+//--------------------------
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,4 +21,51 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: $very-light-gray;
+}
+
+.wrapper {
+  height: calc(100vh - 17px);
+}
+
+.header {
+  text-align: center;
+  color: $very-dark-blue;
+  padding-top: 85px;
+  margin-bottom: 75px;
+
+  &__title {
+    font-weight: 200;
+    font-size: 25px;
+    //full size
+    // font-size: 36px;
+  }
+
+  &__title-main {
+    display: block;
+    font-weight: 600;
+    // line-height: 45px;
+  }
+
+  &__sub-text {
+    max-width: 505px;
+    font-size: 15px;
+    margin: 22px auto 0 auto;
+    padding: 0 30px;
+    font-weight: 400;
+    color: $grayish-blue;
+  }
+}
+
+.main {
+}
+
+footer {
+  position: relative;
+  bottom: 0;
 }
