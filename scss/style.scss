@@ -23,14 +23,20 @@ $very-light-gray: hsl(0, 0%, 98%);
   color: hsl(228, 45%, 44%);
 }
 
+:root {
+  min-height: 100vh;
+}
+
 body {
+  position: relative;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   background-color: $very-light-gray;
 }
 
 .wrapper {
-  height: calc(100vh - 17px);
+  height: calc(100% - 17px);
+  padding-bottom: 40px;
 }
 
 .header {
@@ -62,10 +68,47 @@ body {
   }
 }
 
-.main {
+.section {
+  //section here
+
+  &__card {
+    position: relative;
+    background-color: white;
+    max-width: 311px;
+    min-height: 222px;
+    margin: 0 auto 25px auto;
+    border-top: 4px solid black;
+    border-radius: 2% 2% 5px 5px;
+    box-shadow: 0 20px 20px -5px hsla(212, 86%, 64%, 0.2);
+
+    &--supervisor {
+      border-color: $cyan;
+    }
+    &--teambuilder {
+      border-color: $red;
+    }
+    &--karma {
+      border-color: $orange;
+    }
+    &--calculator {
+      border-color: $blue;
+    }
+  }
+
+  &__card-main {
+    padding: 28px;
+  }
+
+  &__card-image {
+    width: 57px;
+    height: auto;
+  }
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -17px;
 }
