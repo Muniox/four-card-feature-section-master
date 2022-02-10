@@ -42,14 +42,12 @@ body {
 .header {
   text-align: center;
   color: $very-dark-blue;
-  padding-top: 85px;
+  padding-top: 80px;
   margin-bottom: 75px;
 
   &__title {
     font-weight: 200;
     font-size: 25px;
-    //full size
-    // font-size: 36px;
   }
 
   &__title-main {
@@ -78,7 +76,7 @@ body {
     min-height: 222px;
     margin: 0 auto 25px auto;
     border-top: 4px solid black;
-    border-radius: 2% 2% 5px 5px;
+    border-radius: 1.8% 1.8% 10px 10px;
     box-shadow: 0 20px 20px -5px hsla(212, 86%, 64%, 0.2);
 
     &--supervisor {
@@ -97,11 +95,29 @@ body {
 
   &__card-main {
     padding: 28px;
+    padding-bottom: calc(57px + 28px);
+  }
+
+  &__card-title {
+    color: $very-dark-blue;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__card-text {
+    font-size: 13px;
+    color: $grayish-blue;
+    margin-bottom: 5px;
+    line-height: 24 px;
   }
 
   &__card-image {
     width: 57px;
     height: auto;
+    position: absolute;
+    right: 28px;
+    bottom: 28px;
   }
 }
 
@@ -111,4 +127,55 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   margin-top: -17px;
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    margin-bottom: 65px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    &__sub-text {
+      max-width: 600px;
+    }
+  }
+
+  .section {
+    &__card {
+      max-width: 350px;
+      min-height: 250px;
+    }
+
+    &__card-title {
+      margin-bottom: 10px;
+    }
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1130px) {
+  .main {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .main {
+    margin: 0 10px;
+  }
+
+  .section {
+    &__card {
+      min-width: 170px;
+    }
+  }
 }
